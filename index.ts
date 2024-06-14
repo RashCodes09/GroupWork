@@ -1,8 +1,8 @@
 import express, { Application } from "express";
 import cors from "cors";
-// import { PORT } from "./utlis/constant";
+import { PORT } from "./utlis/constant";
 import { IncomingMessage, ServerResponse, Server } from "node:http";
-const PORT = 3434;
+// const PORT = 3434;
 const app: Application = express();
 
 app.use(express.json());
