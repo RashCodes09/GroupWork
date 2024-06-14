@@ -1,5 +1,5 @@
 import { iAdmin } from "../utlis/interface";
-import { Schema } from "mongoose";
+import { Schema, Document, model } from "mongoose";
 
 interface iAdminData extends iAdmin, Document {}
 
@@ -25,3 +25,5 @@ const adminModel = new Schema<iAdminData>({
     type: String,
   },
 });
+
+export default model("admins", adminModel);
