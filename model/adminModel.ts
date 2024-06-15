@@ -18,6 +18,9 @@ const adminModel = new Schema<iAdminData>({
     type: Boolean,
     default: false,
   },
+  role: {
+    type: String,
+  },
   addressName: {
     type: String,
   },

@@ -5,6 +5,7 @@ export interface iAdmin {
   verify: boolean;
   addressName: string;
   password: string;
+  role: string;
 }
 
 export interface iDelivery {
