@@ -21,7 +21,7 @@ const oAuth = new google.auth.OAuth2(
 
 oAuth.setCredentials({ refresh_token: MY_GOOGLE_TOKEN });
 
-export const createAgentAccounEmail = async (admin: iAdminData) => {
+export const createAdminMail = async (admin: iAdminData) => {
   try {
     const token: any = (await oAuth.getAccessToken()).token;
 
@@ -37,7 +37,7 @@ export const createAgentAccounEmail = async (admin: iAdminData) => {
       },
     });
 
-    const url: string = `http://localhost:4545/api/v1/verify-agent/ ${admin?._id}`;
+    const url: string = `http://localhost:4545/api/v1/verify-agent/${admin?._id}`;
 
     const mailer = {
       to: admin?.email,
