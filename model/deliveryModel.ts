@@ -1,3 +1,4 @@
+import { ROLE } from "../utlis/enum";
 import { iDelivery } from "../utlis/interface";
 import { Schema, Document, model } from "mongoose";
 
@@ -20,5 +21,9 @@ const deliveryModel = new Schema<iDeliveryData>({
   avatar: {
     type: String,
   },
+  role: {
+    type: String,
+    default: ROLE.DELIVERY,
+  },
 });
-export default model("deliverys", deliveryModel);
+export default model("deliveries", deliveryModel);

@@ -1,6 +1,7 @@
 import { Application } from "express";
 import { Request, Response } from "express";
 import router from "./router/adminRouter";
+import routerDelivery from "./router/deliveryRouter";
 
 export const mainApp = async (app: Application) => {
   // default route
@@ -18,4 +19,5 @@ export const mainApp = async (app: Application) => {
     }
   });
   app.use("/api", router);
+  app.use("/api", routerDelivery);
 };
