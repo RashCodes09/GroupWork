@@ -17,7 +17,7 @@ export const createAdmin = async (
       lastName,
       email,
       addressName,
-      role: "admin"
+      role: "admin",
       password: hashed,
     });
     return res.status(200).json({

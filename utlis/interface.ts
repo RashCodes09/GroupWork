@@ -1,3 +1,5 @@
+import { Document } from "mongoose";
+
 export interface iAdmin {
   firstName: string;
   lastName: string;
@@ -7,6 +9,8 @@ export interface iAdmin {
   password: string;
   role: string;
 }
+
+export interface iAdminData extends iAdmin, Document {}
 
 export interface iDelivery {
   firstName: string;
