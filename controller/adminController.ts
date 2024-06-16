@@ -120,3 +120,25 @@ export const verifyAdmin = async (
     });
   }
 };
+
+export const getAdmin = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
+  try {
+    const { adminID } = req.params;
+    const admin = await adminModel.findById(adminID);
+
+    return res.status(201).json({
+      message: "admin found",
+      status: 200,
+      data: admin,
+    });
+  } catch (error: any) {
+    return res.status(404).json({
+      message: "admin not found",
+      status: 404,
+      error: error.message,
+    });
+  }
+};
