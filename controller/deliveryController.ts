@@ -76,3 +76,21 @@ export const deleteDelivery = async (
     });
   }
 };
+export const viewAllDelivery = async (
+  req: Request,
+  res: Response
+): Promise<Response> => {
+  try {
+    const delivery = await deliveryModel.find();
+
+    return res.status(200).json({
+      message: "all delvery found",
+      status: 201,
+      data: delivery,
+    });
+  } catch (error) {
+    return res.status(404).json({
+      message: "error getting delivery",
+    });
+  }
+};
