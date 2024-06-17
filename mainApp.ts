@@ -18,6 +18,7 @@ export const mainApp = async (app: Application) => {
       });
     }
   });
+
   app.use("/api", router);
   app.use("/api", routerDelivery);
 };

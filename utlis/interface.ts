@@ -1,4 +1,5 @@
 import { Document } from "mongoose";
+import { HTTP } from "./enum";
 
 export interface iAdmin {
   firstName: string;
@@ -21,4 +22,11 @@ export interface iDelivery {
   avatar: string;
   role: string;
   admin: {};
+}
+
+export interface iError {
+  name: string;
+  message: string;
+  status: HTTP;
+  success: boolean;
 }
