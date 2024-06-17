@@ -11,6 +11,6 @@ routerDelivery.route("/create-delivery/:adminID").post(createDelivery);
 routerDelivery
   .route("/delete-delivery/:adminID/:deliveryID")
   .delete(deleteDelivery);
-routerDelivery.route("/view-all-delivery").delete(viewAllDelivery);
+routerDelivery.route("/view-all-delivery").get(viewAllDelivery);
 
 export default routerDelivery;
